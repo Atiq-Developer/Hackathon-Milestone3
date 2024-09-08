@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form id="resume-form">
+          <h2>Personal Information</h2>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="johndoe@example.com"
+            required
+          />
+
+          <h2>Education</h2>
+          <label for="school">School:</label>
+          <input
+            type="text"
+            id="school"
+            placeholder="Harvard University"
+            required
+          />
+
+          <label for="degree">Degree:</label>
+          <input
+            type="text"
+            id="degree"
+            placeholder="Bachelor of Science"
+            required
+          />
+
+          <label for="grad-year">Graduation Year:</label>
+          <input type="number" id="grad-year" placeholder="2023" required />
+
+          <h2>Work Experience</h2>
+          <label for="company">Company Name:</label>
+          <input type="text" id="company" placeholder="Tech Corp" required />
+
+          <label for="job-title">Job Title:</label>
+          <input
+            type="text"
+            id="job-title"
+            placeholder="Software Engineer"
+            required
+          />
+
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" required />
+
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" />
+
+          <label for="description">Job Description:</label>
+          <textarea
+            id="description"
+            placeholder="Write a brief job description here..."
+          ></textarea>
+
+          <h2>Skills</h2>
+          <label for="skills">Skills:</label>
+          <input
+            type="text"
+            id="skills"
+            placeholder="JavaScript, Python, React"
+            required
+          />
+
+          <button type="submit">Generate Resume</button>
+        </form>
+      </div>
+
+      <div class="resume-container">
+        <div id="resume">
+          <h1 id="resume-name"></h1>
+          <p id="resume-email"></p>
+
+          <h2>Education</h2>
+          <div id="resume-education"></div>
+
+          <h2>Work Experience</h2>
+          <div id="resume-experience"></div>
+
+          <h2>Skills</h2>
+          <ul id="resume-skills"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
